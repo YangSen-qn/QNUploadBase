@@ -21,10 +21,16 @@ android {
         }
     }
 
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//    implementation 'com.qiniu:curl-android:1.0.0'
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     testImplementation 'junit:junit:4.12'
@@ -42,6 +48,6 @@ uploadArchives{
         // 项目名称
         pom.artifactId = "upload-base"
         // 版本号
-        pom.version = "0.0.1"
+        pom.version = "0.0.2"
     }
 }

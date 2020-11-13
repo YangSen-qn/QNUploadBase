@@ -14,14 +14,15 @@ public interface ICurlConfiguration {
     }
 
     interface IBuilder {
-        IBuilder Builder();
+
+        String[] getDnsResolverArray();
+        String getProxy();
+        String getProxyUserPwd();
+        String getCaPath();
 
         IBuilder setDnsResolverArray(IDnsResolver[] dnsResolverArray);
-
         IBuilder setProxy(String proxy);
-
         IBuilder setProxyUserPwd(String proxyUserPwd);
-
         IBuilder setCaPath(String caPath);
 
         ICurlConfiguration build();
